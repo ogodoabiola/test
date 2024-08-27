@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import ReactTooltip from 'react-tooltip';
 import './SEOAudit.css';
 
 const SEOAudit = () => {
@@ -184,14 +185,16 @@ const SEOAudit = () => {
 const MetaTagResult = ({ label, value, benefit }) => (
     <div className="meta-tag-result">
         <strong>{label}:</strong> {value || 'Not Present'}
-        <p className="meta-tag-benefit">{benefit}</p>
+        <span data-tip={benefit} className="tooltip-icon">ℹ️</span>
+        <ReactTooltip place="top" type="dark" effect="solid" />
     </div>
 );
 
 const ReadabilityResult = ({ label, value, benefit }) => (
     <div className="readability-result">
         <strong>{label}:</strong> {value || 'Not Present'}
-        <p className="readability-benefit">{benefit}</p>
+        <span data-tip={benefit} className="tooltip-icon">ℹ️</span>
+        <ReactTooltip place="top" type="dark" effect="solid" />
     </div>
 );
 

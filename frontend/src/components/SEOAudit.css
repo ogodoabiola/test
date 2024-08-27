@@ -80,13 +80,20 @@
     overflow-x: auto;
 }
 
-.meta-tag-result {
+.meta-tag-result, .readability-result {
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
 }
 
-.meta-tag-benefit {
-    font-size: 0.9em;
-    color: #555;
+.meta-tag-result strong, .readability-result strong {
+    margin-right: 5px;
+}
+
+.tooltip-icon {
+    margin-left: 5px;
+    cursor: pointer;
+    color: #4CAF50;
 }
 
 .not-present {
